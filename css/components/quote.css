@@ -1,0 +1,13 @@
+.quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+}
+
+.quotes__quote {
+  margin-bottom: 10px;
+}

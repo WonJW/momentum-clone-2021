@@ -1,5 +1,5 @@
-const login = document.querySelector(".login")
-const loginInput = document.querySelector(".login__write")
+const login = document.querySelector(".login-form")
+const loginInput = document.querySelector(".login-form__write")
 const usernameText = document.querySelector(".username-text")
 
 function loginSubmit(event) {

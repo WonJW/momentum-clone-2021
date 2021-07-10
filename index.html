@@ -8,35 +8,42 @@
     <title>Momentum Clone</title>
 </head>
 <body>
-    <div class="clock"></div>
-    <div>
-        <form class="login hidden">
-            <input class="login__write"
-            required
-            maxlength="15"
-            type="text"
-            placeholder="What is your name?"/>
-            <input class="login__btn" type="submit" value="Log In"/>
-        </form>
-        <h1 class="username-text hidden"></h1>
-    </div>
-    <div>
-        <form class="to-do-list">
-            <input class="to-do-list__input" type="text" required placeholder="Write a To Do" />
-            <input class="to-do-list__btn" type="submit" value="Press" />
-        </form>
-        <ul class="to-do-list__li"></ul>
-    </div>
+    <section>
+        <div class="clock"></div>
+        <div class="login">
+            <form class="login-form hidden">
+                <input class="login-form__write"
+                required
+                maxlength="30"
+                type="text"
+                placeholder="What is your name?"/>
+                <input class="login-form__btn" type="submit" value="Log In"/>
+            </form>
+            <h1 class="username-text hidden"></h1>
+        </div>
+        <div>
+            <form class="to-do-list">
+                <input class="to-do-list__input" type="text" required placeholder="Write a To Do" />
+                <input class="to-do-list__btn" type="submit" value="Press" />
+            </form>
+            <ul class="to-do-list__li"></ul>
+        </div>
+    </section>
     <div class="quotes">
         <div class="quotes__quote"></div>
         <div class="quotes__author"></div>
     </div>
-    <div class="weather">f</div>
+    <div class="weather">
+        <span></span>
+        <span></span>
+    </div>
+
 
     <script src="js/clock.js"></script>
     <script src="js/login.js"></script>
     <script src="js/to-do-list.js"></script>
     <script src="js/quote.js"></script>
+    <script src="js/weather.js"></script>
     <script src="js/backgroud.js"></script>
 </body>
 </html>
