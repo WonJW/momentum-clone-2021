@@ -1,13 +1,43 @@
+@keyframes weatherLodingAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .weather {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   position: fixed;
-  bottom: 15px;
+  top: 45px;
   right: 15px;
   font-size: 18px;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: weatherLodingAnimation 1s ease-in-out forwards;
+  animation-delay: 5s;
 }
 
 .weather span:first-child {
   margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.weather span:first-child:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.weather span:last-child {
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.weather span:last-child:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
 }

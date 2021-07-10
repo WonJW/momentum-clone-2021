@@ -1,3 +1,13 @@
+@keyframes backgroundLodingAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1.5;
+  }
+}
+
 .background-image {
   display: flex;
   justify-content: center;
@@ -7,4 +17,6 @@
   top: 0;
   width: 100vw;
   height: 100vh;
+  animation: backgroundLodingAnimation 4s ease-in-out forwards;
+  animation-delay: 1.5s;
 }

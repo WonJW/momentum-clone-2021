@@ -1,3 +1,13 @@
+@keyframes quoteLodingAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .quotes {
   display: flex;
   flex-direction: column;
@@ -6,8 +16,27 @@
   top: 15px;
   left: 15px;
   font-size: 18px;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: quoteLodingAnimation 1s ease-in-out forwards;
+  animation-delay: 5s;
 }
 
 .quotes__quote {
   margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.quotes__quote:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1) translateX(15px);
+}
+
+.quotes__author {
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.quotes__author:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
 }

@@ -12,7 +12,7 @@
         <div class="clock"></div>
         <div class="login">
             <form class="login-form hidden">
-                <input class="login-form__write"
+                <input class="login-form__input"
                 required
                 maxlength="30"
                 type="text"
@@ -21,7 +21,7 @@
             </form>
             <h1 class="username-text hidden"></h1>
         </div>
-        <div>
+        <div class="to-do">
             <form class="to-do-list">
                 <input class="to-do-list__input" type="text" required placeholder="Write a To Do" />
                 <input class="to-do-list__btn" type="submit" value="Press" />
@@ -37,7 +37,15 @@
         <span></span>
         <span></span>
     </div>
-
+    <div class="daily">
+        <span></span>
+    </div>
+    <form class="reset">
+        <button class="reset-button">Reset All</button>
+    </form>
+    <div class="loading">
+        <span>Loading</span>
+    </div>
 
     <script src="js/clock.js"></script>
     <script src="js/login.js"></script>
@@ -45,5 +53,7 @@
     <script src="js/quote.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/backgroud.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/reset.js"></script>
 </body>
 </html>

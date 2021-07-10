@@ -6,6 +6,8 @@
 @import "components/quote.css";
 @import "components/weather.css";
 @import "components/background.css";
+@import "components/loading.css";
+@import "components/reset.css";
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -24,4 +26,17 @@ section {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+@keyframes loadingIsIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.is-in {
+  animation: loadingIsIn 0.5s ease-in-out;
 }

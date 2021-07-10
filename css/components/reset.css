@@ -1,0 +1,34 @@
+@keyframes resetButtonAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.reset {
+  display: flex;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: resetButtonAnimation 1s ease-in-out forwards;
+  animation-delay: 5s;
+}
+
+.reset-button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 3px solid rgba(235, 33, 33, 0.719);
+  border-radius: 10px;
+  font-size: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.reset-button:hover {
+  transform: scale(1.2) translateX(-2px) translateY(-2px);
+  background-color: rgba(0, 0, 0, 1);
+}

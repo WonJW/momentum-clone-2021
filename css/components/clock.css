@@ -1,4 +1,49 @@
+@keyframes clockLodingAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .clock {
   font-size: 120px;
   font-weight: 700;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: clockLodingAnimation 1s ease-in-out forwards;
+  animation-delay: 4s;
+}
+
+@keyframes dailyLodingAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.daily {
+  display: flex;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: dailyLodingAnimation 1s ease-in-out forwards;
+  animation-delay: 5s;
+}
+
+.daily span {
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.daily span:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
 }

@@ -1,5 +1,5 @@
 const login = document.querySelector(".login-form")
-const loginInput = document.querySelector(".login-form__write")
+const loginInput = document.querySelector(".login-form__input")
 const usernameText = document.querySelector(".username-text")
 
 function loginSubmit(event) {
@@ -13,6 +13,7 @@ function loginSubmit(event) {
 function paintGreetings(username) {
     usernameText.innerText = `Hello ${username}`;
     usernameText.classList.remove("hidden");
+    usernameText.classList.add("is-in")
 }
 
 const savedUsername = localStorage.getItem("username");
