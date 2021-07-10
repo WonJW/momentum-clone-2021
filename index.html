@@ -9,7 +9,17 @@
 </head>
 <body>
     <div class="clock"></div>
-    <div class="login">f</div>
+    <div>
+        <form class="login hidden">
+            <input class="login__write"
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"/>
+            <input class="login__btn" type="submit" value="Log In"/>
+        </form>
+        <h1 class="username-text hidden"></h1>
+    </div>
     <div class="to-do-list">f</div>
     <div class="quotes">
         <div class="quotes__quote"></div>
@@ -18,6 +28,7 @@
     <div class="weather">f</div>
 
     <script src="js/clock.js"></script>
+    <script src="js/login.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/backgroud.js"></script>
 </body>
