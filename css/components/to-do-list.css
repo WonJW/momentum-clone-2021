@@ -10,6 +10,7 @@
 
 .to-do {
   opacity: 0;
+  will-change: transform, opacity;
   transform: translateY(30px);
   animation: toDoListLodingAnimation 1s ease-in-out forwards;
   animation-delay: 4.5s;

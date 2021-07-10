@@ -17,6 +17,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
+  will-change: opacity;
   animation: backgroundLodingAnimation 4s ease-in-out forwards;
   animation-delay: 1.5s;
 }
@@ -40,6 +41,7 @@
   left: 15px;
   font-size: 18px;
   opacity: 0;
+  will-change: transform, opacity;
   transform: translateX(-30px);
   animation: sloganLodingAnimation 1s ease-in-out forwards;
   animation-delay: 5s;

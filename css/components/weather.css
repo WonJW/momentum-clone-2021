@@ -17,6 +17,7 @@
   right: 15px;
   font-size: 18px;
   opacity: 0;
+  will-change: transform, opacity;
   transform: translateX(30px);
   animation: weatherLodingAnimation 1s ease-in-out forwards;
   animation-delay: 5s;

@@ -13,6 +13,7 @@
   height: 50px;
   margin-top: 30px;
   opacity: 0;
+  will-change: transform, opacity;
   transform: translateY(30px);
   animation: loginLodingAnimation 1s ease-in-out forwards;
   animation-delay: 4.25s;

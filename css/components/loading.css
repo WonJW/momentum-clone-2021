@@ -20,7 +20,7 @@
   height: 100vh;
   top: 0;
   font-size: 34px;
-  will-change: opacity;
+  will-change: transform, opacity;
   animation: loadingAnimation 2.5s ease-in forwards;
   animation-delay: 1500ms;
 }
