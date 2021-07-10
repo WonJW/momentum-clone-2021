@@ -20,3 +20,46 @@
   animation: backgroundLodingAnimation 4s ease-in-out forwards;
   animation-delay: 1.5s;
 }
+
+@keyframes sloganLodingAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.team-slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: sloganLodingAnimation 1s ease-in-out forwards;
+  animation-delay: 5s;
+}
+
+.team-slogan__text {
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.team-slogan__text:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1) translateX(5px);
+}
+
+.team-slogan__team-name {
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.team-slogan__team-name:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
