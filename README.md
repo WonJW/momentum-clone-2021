@@ -14,6 +14,8 @@ we provide that
 
 -europe soccer team style background image and slogan
 
+(character : kakao friends)
+
 (Man city, Man utd, liverpool, Chelsea, Leciester, Barcelona, Real Madrid, A.C Milan, Bayern, PSG).
 
 Caution
