@@ -12,3 +12,4 @@ we provide that
 
 Caution
 -you can reset all localstorage save data from reset button('Reset All').
+-There is still a small error in the 'to do done list'. Please reset local storage through reset button.
