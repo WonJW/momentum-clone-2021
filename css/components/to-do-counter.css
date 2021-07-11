@@ -1,3 +1,13 @@
+@keyframes toDoLoadingAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1.5;
+  }
+}
+
 .to-do-counter {
   display: flex;
   flex-direction: column;
@@ -6,8 +16,85 @@
   bottom: 15px;
   left: 15px;
   background-color: rgba(0, 0, 0, 0.4);
-  border: 3px solid rgba(40, 235, 33, 0.719);
+  border: 3px solid white;
   border-radius: 10px;
   padding: 2px;
   font-size: 20px;
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translateX(-30px);
+  animation: toDoLoadingAnimation 1s ease-in-out forwards;
+  animation-delay: 5s;
+}
+
+.to-do-done-list__button {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(63, 231, 22);
+  border: none;
+  border-top: 3px solid white;
+  font-weight: 500;
+}
+
+.to-do-done-list__li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  width: 50%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid white;
+}
+
+.to-do-done-list__li li {
+  margin-top: 10px;
+  margin-left: 20px;
+  border-bottom: 2px solid white;
+}
+
+.to-do-done-list__li li:last-child {
+  margin-bottom: 10px;
+}
+
+.to-do-done-list__li span {
+  font-size: 20px;
+}
+
+.to-do-done-list__li__btn {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: none;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: 700;
+  color: tomato;
+}
+
+@keyframes doneListOpenAnimation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.window-open {
+  animation: doneListOpenAnimation 0.2s ease-in-out forwards;
+}
+
+@keyframes doneListCloseAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.window-close {
+  animation: doneListCloseAnimation 0.2s ease-in-out forwards;
 }

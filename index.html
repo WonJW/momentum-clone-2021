@@ -22,13 +22,18 @@
                 placeholder="What is your name?"/>
                 <input class="login-form__btn" type="submit" value="Log In"/>
             </form>
-            <h1 class="username-text hidden"></h1>
+            <h1 class="username-text close"></h1>
         </div>
         <div class="to-do-counter">
             <div class="to-do-counter__yet"></div>
             <div class="to-do-counter__done"></div>
+            <form>
+                <button class="to-do-done-list__button">Show Done List</button>
+            </form>
         </div>
-        <ul class="to-do-done-list__li"></ul>
+        <ul class="to-do-done-list__li window-close">
+            <button class="to-do-done-list__li__btn">X</button>
+        </ul>
         <div class="to-do">
             <form class="to-do-list">
                 <input class="to-do-list__input" type="text" required placeholder="Write a To Do" />

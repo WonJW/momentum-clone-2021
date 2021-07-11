@@ -96,3 +96,21 @@ function addDoneToDo(event) {
     }
     paintDoneToDo(newToDoObject);
 }
+
+const doneListOpenButton = document.querySelector(".to-do-done-list__button")
+const doneListCloseButton = document.querySelector(".to-do-done-list__li__btn")
+
+function handleDoneListOpenButton(event) {
+    event.preventDefault()
+    doneToDoListLi.classList.remove("window-close")
+    doneToDoListLi.classList.add("window-open")
+}
+function handleDoneListCloseButton(event) {
+    event.preventDefault()
+    doneToDoListLi.classList.remove("window-open")
+    doneToDoListLi.classList.add("window-close")
+}
+
+
+doneListOpenButton.addEventListener("click", handleDoneListOpenButton)
+doneListCloseButton.addEventListener("click", handleDoneListCloseButton)
