@@ -3,8 +3,10 @@ const toDoListInput = document.querySelector(".to-do-list__input");
 const toDoListLi = document.querySelector(".to-do-list__li");
 const toDoCounterYet = document.querySelector(".to-do-counter__yet")
 const toDoCounterDone = document.querySelector(".to-do-counter__done")
+const doneToDoListLi = document.querySelector(".to-do-done-list__li")
 
 const TODOS_KEY = "todos"
+const DONETODOS_KEY = "donetodos"
 
 let toDos = [];
 let doneToDos = []
@@ -14,9 +16,11 @@ function saveToDos() {
 }
 
 function deleteToDo(event) {
+    addDoneToDo(event)
     const li = event.target.parentElement;
-    doneToDos.push(li.querySelector("span").innerText)
-    localStorage.setItem("donetodo", JSON.stringify(doneToDos))
+    const doneObject = {text : li.querySelector("span").innerText}
+    doneToDos.push(doneObject)
+    localStorage.setItem(DONETODOS_KEY, JSON.stringify(doneToDos))
     li.remove();
     toDos = toDos.filter(todo => todo.id !== parseInt(li.id))
     saveToDos()
@@ -60,9 +64,35 @@ if (savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
-    toDoCounterYet.innerText = `Yet : ${toDos.length}`
 }
 
-if (doneToDos !== null) {
-    toDoCounterDone.innerText = `Done : ${doneToDos.length}`
+const donedToDos = localStorage.getItem(DONETODOS_KEY)
+
+if (donedToDos !== null) {
+    const parsedDoneToDos = JSON.parse(donedToDos);
+    doneToDos = parsedDoneToDos;
+    parsedDoneToDos.forEach(paintDoneToDo)
+}
+
+toDoCounterYet.innerText = `Yet : ${toDos.length}`
+toDoCounterDone.innerText = `Done : ${doneToDos.length}`
+
+
+
+function paintDoneToDo(newDoneToDo) {
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    span.innerText = newDoneToDo.text;
+    li.appendChild(span);
+    doneToDoListLi.appendChild(li);
+}
+
+function addDoneToDo(event) {
+    event.preventDefault();
+    const li = event.target.parentElement;
+    const newToDo = li.querySelector("span").innerText
+    const newToDoObject = {
+        text: newToDo,
+    }
+    paintDoneToDo(newToDoObject);
 }
