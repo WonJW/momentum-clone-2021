@@ -44,7 +44,8 @@
 .login-form__input::placeholder {
   color: white;
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .login-form__btn {
