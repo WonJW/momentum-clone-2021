@@ -98,7 +98,7 @@ function addDoneToDo(event) {
 }
 
 const doneListOpenButton = document.querySelector(".to-do-done-list__button")
-const doneListCloseButton = document.querySelector(".to-do-done-list__li__btn")
+const doneListCloseButton = document.querySelector(".to-do-done-list__li__window-btn")
 
 function handleDoneListOpenButton(event) {
     event.preventDefault()
